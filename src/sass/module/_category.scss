@@ -1,0 +1,114 @@
+@use "../global" as g;
+
+//---------------------------------------------------------------------------------
+//  PC
+//---------------------------------------------------------------------------------
+.a-post {
+  display: flex;
+  justify-content: space-between;
+
+  &_inner {
+    width: 70%;
+  }
+
+  &_list {
+
+  }
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &_item::after {
+    content: "";
+    width: 100%;
+    border-bottom: 1px g.$primary-color dotted;
+    position: absolute;
+    bottom:  -23px;
+  }
+
+  &_item:nth-of-type(n + 2) {
+    margin-top: 50px;
+  }
+
+  &_img {
+    width: 30%;
+  }
+
+  &_content {
+    width: 65%;
+  }
+
+  &_info {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+
+  &_date {
+    color: g.$primary-color;
+    font-size: 1.4rem;
+  }
+
+  &_cate {
+    color: g.$primary-color;
+    margin-left: 15px;
+    font-size: 1.4rem;
+  }
+
+  &_ttl {
+    color: g.$primary-color;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &_txt {
+    font-size: 1.6rem;
+    margin-top: 10px;
+  }
+}
+
+//---------------------------------------------------------------------------------
+//  lg (max-width: 1000px)
+//---------------------------------------------------------------------------------
+
+
+
+//---------------------------------------------------------------------------------
+//  SP (max-width: 768px)
+//---------------------------------------------------------------------------------
+
+@include g.mq() {
+  .a-post {
+    flex-direction: column;
+  
+    &_inner {
+      width: 100%;
+    }
+  
+    &_list {
+  
+    }
+  
+    &_item {
+      flex-direction: column;
+    }
+  
+    &_item:nth-of-type(n + 2) {
+      margin-top: 50px;
+    }
+  
+    &_item:nth-of-type(n + 2)::before {
+      height: 0px;
+    }
+  
+    &_img {
+      width: 100%;
+    }
+  
+    &_content {
+      width: 100%;
+    }
+  }
+}

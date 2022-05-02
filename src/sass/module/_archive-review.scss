@@ -1,0 +1,146 @@
+@use "../global" as g;
+
+//---------------------------------------------------------------------------------
+//  PC
+//---------------------------------------------------------------------------------
+.cat-list {
+  display: flex;
+  margin-top: 5px;
+
+  .cat-item {
+    box-sizing: border-box;
+  }
+
+  .cat-item:nth-of-type(n + 2) {
+    margin-left: 40px;
+  }
+
+  .cat-item.current-cat a {
+    color: g.$secondary-color;
+    background-color: #fff;
+    outline: 2px solid g.$secondary-color;
+  }
+
+  .cat-item a {
+    color: #fff;
+    background-color: g.$secondary-color;
+    width: 150px;
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+    box-sizing: border-box;
+  }
+
+  .cat-item.cat-item-all a {
+    color: g.$secondary-color;
+    background-color: #fff;
+    outline: 2px solid g.$secondary-color;
+  }
+
+  .cat-item a:hover {
+    color: g.$secondary-color;
+    background-color: #fff;
+    outline: 2px solid g.$secondary-color;
+    box-sizing: border-box; 
+  }
+}
+
+.review {
+  margin-top: 70px;
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &_list::after {
+    content: "";
+    display: block;
+    width: 30%;  /* articleに指定したwidthと同じ幅を指定する */
+    height: 0;
+  }
+
+  &_item {
+    width: 30%;
+  }
+
+  &_item:not(:nth-child(3n)) {
+    // margin-right: 6%;
+  }
+
+  &_item:nth-of-type(n + 4) {
+    margin-top: 70px;
+  }
+
+  &_cat {
+    color: g.$primary-color;
+    font-size: 1.4rem;
+  }
+
+  &_ttl {
+    color: g.$primary-color;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    transition: 0.3s;
+  }
+
+  &_ttl:hover {
+    opacity: 0.8;
+  }
+
+  &_btn {
+    color: g.$primary-color;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 900;
+    display: block;
+    text-align: right;
+  }
+}
+
+
+
+//---------------------------------------------------------------------------------
+//  SP (max-width: 768px)
+//---------------------------------------------------------------------------------
+
+@include g.mq() {
+  .cat-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .cat-item:nth-of-type(n + 2) {
+      margin-left: 0;
+    }
+  
+    .cat-item:nth-of-type(even) {
+      // margin-left: 20px;
+    }
+
+    .cat-item:nth-of-type(n + 3) {
+      margin-top: 15px;
+    }
+
+    .cat-item {
+      width: 47%;
+    }
+
+    .cat-item a {
+      width: 100%;
+    }
+  }
+
+  .review {
+  
+    &_item {
+      width: 100%;
+    }
+
+    &_item:nth-of-type(n + 2) {
+      margin-top: 30px;
+    }
+  }
+}

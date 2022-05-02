@@ -1,0 +1,85 @@
+@use "../global" as g;
+
+.side {
+  width: 240px;
+
+  .search-form {
+
+    input {
+      width: 100%;
+      padding: 3px;
+      font-size: 1.6rem;
+      border: 1px solid g.$primary-color;
+    }
+  }
+
+  &_popular {
+    margin-top: 20px;
+  }
+
+  &_new {
+    margin-top: 30px;
+  }
+
+  &_ttl {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.7rem;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background-color: g.$secondary-color;
+  }
+
+  &_box-link {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_img {
+    width: 35%;
+  }
+
+  &_subttl {
+    width: 60%;
+    font-size: 1.4rem;
+  }
+
+  &_month {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+
+  &_cate {
+    margin-top: 30px;
+
+    a {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+//---------------------------------------------------------------------------------
+//  SP (max-width: 768px)
+//---------------------------------------------------------------------------------
+
+@include g.mq() {
+  .side {
+    width: 100%;
+    margin-top: 50px;
+
+    &_subttl {
+      width: 60%;
+      font-size: 1.7rem;
+    }
+
+    &_month {
+      font-size: 1.7rem;
+    }
+  
+    &_cate {
+      a {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
