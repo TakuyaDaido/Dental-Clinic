@@ -38,7 +38,7 @@
 //---------------------------------------------------------------------------------
 .mv-page {
   height: 400px;
-  background-image: url('../../dist/img/mv-page.jpg');
+  background: url('../../dist/img/mv-page.jpg');
   position: relative;
 
   &::before {

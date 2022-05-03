@@ -905,7 +905,7 @@ progress {
 }
 .mv-page {
   height: 400px;
-  background-image: url("../../dist/img/mv-page.jpg");
+  background: url("../../dist/img/mv-page.jpg");
   position: relative;
 }
 .mv-page::before {
@@ -2004,7 +2004,7 @@ progress {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: 65px 0;
-  background-image: url(../../dist/img/back-image01.jpg);
+  background: url(../../dist/img/back-image01.jpg);
   background-size: cover;
 }
 .sec01 .col3_img-wrap {
@@ -2093,7 +2093,7 @@ progress {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: 65px 0;
-  background-image: url(../../dist/img/back-image02.jpg);
+  background: url(../../dist/img/back-image02.jpg);
   background-size: cover;
 }
 .sec02 .service_ttl {
